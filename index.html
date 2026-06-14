@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張佑誠 的 MyApps 應用總覽</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col justify-between font-sans">
+
+    <header class="bg-blue-600 text-white text-center py-12 px-4 shadow-md">
+        <h1 class="text-3xl md:text-4xl font-bold"> 張佑誠 的 MyApps 應用總覽</h1>
+        <p class="mt-2 text-blue-100">歡迎來到我的網頁程式期末專案！點擊下方卡片開啟精彩的 Web Apps。</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-12 flex-grow w-full">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-2 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                <div class="p-6">
+                    <div class="text-2xl mb-2">📊</div>
+                    <h2 class="text-xl font-bold text-gray-800 mb-2">BMI 健康計算機</h2>
+                    <p class="text-gray-600 text-sm leading-relaxed">輸入身高與體重，一秒算出你的體態健康數值，出門運動、維持身材必備的實用小工具。</p>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="./app1-bmi/index.html" class="block text-center bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+                        開啟頁面
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-2 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                <div class="p-6">
+                    <div class="text-2xl mb-2">🗣️</div>
+                    <h2 class="text-xl font-bold text-gray-800 mb-2">英文口說對話卡</h2>
+                    <p class="text-gray-600 text-sm leading-relaxed">趣味 3D 翻牌互動字卡！正面挑戰英文口說台詞，點擊即可翻面查看中文翻譯，練英檢超方便。</p>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="./app2-quiz/index.html" class="block text-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+                        開始練習
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-2 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                <div class="p-6">
+                    <div class="text-2xl mb-2">🧘‍♂️</div>
+                    <h2 class="text-xl font-bold text-gray-800 mb-2">運動收操計時器</h2>
+                    <p class="text-gray-600 text-sm leading-relaxed">內建時間倒數魔法。專為運動後的拉筋、肌肉放鬆設計，提供多種快捷時間，滴答倒數不對稱！</p>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="./app3-timer/index.html" class="block text-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-200">
+                        開啟頁面
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 text-center py-4 text-sm">
+        <p>&copy; 2026 智慧化網頁程式期末作業. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

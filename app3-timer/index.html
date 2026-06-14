@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收操倒數計時器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="timer-card">
+        <h1>🧘‍♂️ 伸展收操計時器</h1>
+        <p>放鬆肌肉時間！請選擇倒數時間：</p>
+        
+        <div class="preset-buttons">
+            <button class="preset-btn" data-time="30">30 秒</button>
+            <button class="preset-btn" data-time="60">1 分鐘</button>
+            <button class="preset-btn" data-time="120">2 分鐘</button>
+        </div>
+
+        <div class="time-display" id="display">00:30</div>
+
+        <div class="control-buttons">
+            <button id="startBtn" class="control-btn start">開始計時</button>
+            <button id="pauseBtn" class="control-btn pause">暫停</button>
+            <button id="resetBtn" class="control-btn reset">重設</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

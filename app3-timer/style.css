@@ -1,0 +1,75 @@
+/* 背景採用舒服的森林系淡綠色 */
+body {
+    font-family: "微軟正黑體", sans-serif;
+    background-color: #e8f5e9;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 計時器主卡片 */
+.timer-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    text-align: center;
+    width: 320px;
+}
+
+/* 快速選時間的按鈕區域 */
+.preset-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.preset-btn {
+    background-color: #f1f3f4;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.preset-btn:hover {
+    background-color: #a5d6a7; /* 滑鼠移過去變淡綠色 */
+}
+
+/* 大大醒目的時間數字 */
+.time-display {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #2e7d32; /* 深綠色 */
+    margin: 20px 0;
+    font-family: monospace; /* 讓數字寬度一樣，倒數時才不會抖動 */
+}
+
+/* 控制按鈕區域 */
+.control-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.control-btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+.control-btn:hover {
+    opacity: 0.8; /* 滑鼠移過去稍微變透明，提示可以點擊 */
+}
+
+/* 三種按鈕各自的顏色 */
+.start { background-color: #4caf50; }
+.pause { background-color: #ff9800; }
+.reset { background-color: #f44336; }

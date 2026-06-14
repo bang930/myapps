@@ -1,0 +1,87 @@
+/* 讓網頁背景變成柔和的淡藍色，並把卡片排成一列 */
+body {
+    font-family: "微軟正黑體", sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 放卡片的容器，用 Flexbox 讓卡片在手和電腦上都能自動排列 (RWD) */
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* 這是單張卡片的立體舞台空間 */
+.flashcard {
+    width: 280px;
+    height: 180px;
+    perspective: 1000px; /* 3D 透視效果，數字越小越立體 */
+    cursor: pointer;
+}
+
+/* 這是卡片的本體，負責控制翻轉動畫 */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d; /* 啟用 3D 效果 */
+    transition: transform 0.6s;  /* 翻轉需要 0.6 秒 */
+}
+
+/* 💡 重點：當卡片被加上 .flipped 這個隱藏機關時，就要轉 180 度 */
+.flashcard.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* 正面和背面的共同設定 */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* 翻到背面時，正面就要隱藏起來 */
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 正面外觀 (英文) */
+.card-front {
+    background-color: #ffffff;
+    border: 2px solid #3b82f6;
+    color: #1e3a8a;
+}
+
+/* 背面外觀 (中文翻譯) */
+.card-back {
+    background-color: #3b82f6;
+    color: white;
+    transform: rotateY(180deg); /* 背面本來就是反的，翻過來才會變正的 */
+}
+
+.role {
+    font-weight: bold;
+    color: #ef4444;
+    margin: 0;
+}
+
+.sentence, .translation {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px;
+}
